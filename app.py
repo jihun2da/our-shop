@@ -300,7 +300,8 @@ def save_inquiry(inquiry_data):
 def load_google_sheet_data():
     try:
         sheet_id = "1Cnd19QAMyNEgvEdfXTA1QtW0VMiTRMCBFGmrzKWezNQ"
-        url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+        gid = "531747363"  # OUR 시트
+        url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
         df = pd.read_csv(url)
         return df
     except Exception as e:
