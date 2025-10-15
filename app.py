@@ -13,7 +13,7 @@ import io
 
 # 페이지 설정
 st.set_page_config(
-    page_title="OAHU Shop",
+    page_title="OUR Shop",
     page_icon="🛍️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -27,8 +27,8 @@ DATA_DIR.mkdir(exist_ok=True)
 IMAGE_DIR = Path("image")
 
 # 관리자 계정 정보
-ADMIN_USERNAME = "oahu"
-ADMIN_PASSWORD = "oahu123"
+ADMIN_USERNAME = "our"
+ADMIN_PASSWORD = "our123"
 
 # CSS 스타일링
 st.markdown("""
