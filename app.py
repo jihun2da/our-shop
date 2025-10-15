@@ -317,7 +317,9 @@ def get_product_folders():
     image_path = Path("image")
     if not image_path.exists():
         return []
-    folders = sorted([f for f in image_path.iterdir() if f.is_dir()])
+    folders = [f for f in image_path.iterdir() if f.is_dir()]
+    # 숫자 폴더명은 숫자로 정렬, 그 외는 문자열로 정렬
+    folders = sorted(folders, key=lambda f: int(f.name) if f.name.isdigit() else float('inf'))
     return folders
 
 # 폴더의 이미지 파일 가져오기
