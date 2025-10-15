@@ -46,6 +46,7 @@ Thumbs.db
 *.tmp
 .cache/
 
-# Data files (exclude inquiries but keep settings)
+# Data files (exclude dynamic settings and inquiries)
 data/inquiries.json
+data/settings.json
 
